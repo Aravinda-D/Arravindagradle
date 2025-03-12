@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation 'org.seleniumhq.selenium:selenium-dependencies-bom:4.25.0'
+    implementation 'org.realityforge.arez.testng:arez-testng:0.29'
+}
+
+test {
+    useJUnitPlatform()
+}
